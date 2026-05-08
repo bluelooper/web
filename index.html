@@ -63,7 +63,7 @@
     display: flex; align-items: center; gap: 0.6rem;
   }
   .nav-logo img { height: 32px; width: auto; }
-  .nav-logo span { color: var(--text); }
+  .nav-logo span:not(.accent) { color: var(--text); }
   .nav-links { display: flex; gap: 2rem; list-style: none; }
   .nav-links a {
     color: var(--muted); text-decoration: none;
@@ -470,7 +470,7 @@
 
 <!-- ── NAV ── -->
 <nav>
-  <a class="nav-logo" href="#"><img src="ios-icon-1024x1024_v2.png" alt="BlueLooper icon"> <span>Blue</span>Looper</a>
+  <a class="nav-logo" href="#"><img src="ios-icon-1024x1024_v2.png" alt="BlueLooper icon"> <span class="accent">Blue</span>Looper</a>
   <ul class="nav-links">
     <li><a href="#features">Features</a></li>
     <li><a href="#screenshots">Screenshots</a></li>
@@ -489,7 +489,7 @@
   <div class="hero-eyebrow">iPhone / iPad Loop Pedal App</div>
 
   <h1 class="hero-title">
-    <img src="ios-icon-1024x1024_v2.png" alt="BlueLooper icon"> Blue<span class="accent">Looper</span>
+    <img src="ios-icon-1024x1024_v2.png" alt="BlueLooper icon"> <span class="accent">Blue</span>Looper
   </h1>
 
   <p class="hero-sub">
@@ -549,8 +549,8 @@
 <section id="features" class="features">
   <div class="features-header reveal">
     <div class="section-label">Features</div>
-    <h2 class="section-title">すべてが揃った<br>ループスタジオ</h2>
-    <p>大型ペダルボードはもう不要。iPhone / iPadだけで、本番レベルのループ演奏が手のひらに。</p>
+    <h2 class="section-title">アプリで完結</h2>
+    <p>ペダルボード不要。iPhone / iPadだけで、Loop / Freeze練習。</p>
   </div>
 
   <div class="features-grid reveal">
@@ -591,7 +591,7 @@
 <section id="screenshots" class="screenshots">
   <div class="screenshots-header reveal">
     <div class="section-label">Screenshots</div>
-    <h2 class="section-title">洗練されたUI</h2>
+    <h2 class="section-title">馴染みのある直感的UI</h2>
     <p>ダーク基調の視認性の高いインターフェース。演奏に集中できるデザイン。</p>
   </div>
 
@@ -707,8 +707,8 @@
         <div class="price-note">ダウンロード無料</div>
         <ul class="price-features">
           <li>マルチトラックルーパー</li>
-          <li>基本エフェクト</li>
-          <li>プリセット（一部）</li>
+          <li>エフェクト</li>
+          <li>Amp Sim</li>
           <li>iPhone / iPad対応</li>
         </ul>
       </div>
@@ -718,10 +718,8 @@
         <div class="price-amount">¥<span style="font-size:2.5rem">500</span></div>
         <div class="price-note">買い切り・永続ライセンス</div>
         <ul class="price-features">
-          <li>全エフェクト解放</li>
           <li>Sustain / Freeze機能</li>
-          <li>全プリセット</li>
-          <li>Amp Sim</li>
+          <li>プリセット保存</li>
           <li>将来の機能追加</li>
         </ul>
       </div>
@@ -733,7 +731,7 @@
 <section class="cta-section">
   <div class="cta-bg"></div>
   <div class="reveal">
-    <h2 class="cta-title">いますぐ<br><span class="accent">ループを刻め</span></h2>
+    <h2 class="cta-title">まずは<br><span class="accent">お試し</span></h2>
     <p class="cta-sub">iPhoneとギター、それだけで本格的なループ演奏が始まる。</p>
     <a class="btn-primary" href="https://apps.apple.com/jp/app/bluelooper-loop-pedal-app/id6763000592" target="_blank" style="font-size:1.05rem;padding:1rem 2.5rem;">
       <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
@@ -744,7 +742,7 @@
 
 <!-- ── FOOTER ── -->
 <footer>
-  <a class="footer-logo" href="#">Blue<span>Looper</span></a>
+  <a class="footer-logo" href="#"><span class="accent">Blue</span>Looper</a>
   <span class="footer-copy">© 2026 Osamu Sambuichi. All rights reserved.</span>
   <div class="footer-links">
     <a href="https://github.com/sambuichi/bluelooper-support/blob/main/PRIVACY.md" target="_blank">Privacy Policy</a>
