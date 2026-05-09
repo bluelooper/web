@@ -8,6 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <style>
   :root {
     --blue: #0099ff;
@@ -64,6 +65,7 @@
   }
   .nav-logo img { height: 32px; width: auto; }
   .nav-logo span:not(.accent) { color: var(--text); }
+  .footer-logo span:not(.accent) { color: var(--text); }
   .nav-links { display: flex; gap: 2rem; list-style: none; }
   .nav-links a {
     color: var(--muted); text-decoration: none;
@@ -188,6 +190,7 @@
   .hero-device {
     position: relative; margin-top: 4rem; z-index: 2;
     animation: fadeUp 0.9s 0.35s ease both;
+    display: flex; gap: 1.5rem; justify-content: center; align-items: center; flex-wrap: wrap;
   }
   .device-frame {
     background: #111;
@@ -195,7 +198,7 @@
     border-radius: 20px;
     overflow: hidden;
     box-shadow: 0 0 60px rgba(0,153,255,0.15), 0 40px 80px rgba(0,0,0,0.6);
-    max-width: 800px; width: 90vw;
+    max-width: 525px; width: 67.5vw;
   }
   .device-frame img { width: 100%; display: block; }
 
@@ -276,13 +279,14 @@
   .feat-icon {
     width: 48px; height: 48px; border-radius: 10px;
     display: flex; align-items: center; justify-content: center;
-    font-size: 1.4rem; margin-bottom: 1.2rem;
+    margin-bottom: 1.2rem;
     border: 1px solid rgba(0,153,255,0.2);
+    font-size: 1.4rem;
   }
-  .feat-icon.blue  { background: rgba(0,153,255,0.1); }
-  .feat-icon.red   { background: rgba(255,68,68,0.1); border-color: rgba(255,68,68,0.2); }
-  .feat-icon.purple{ background: rgba(204,68,255,0.1); border-color: rgba(204,68,255,0.2); }
-  .feat-icon.cyan  { background: rgba(68,221,255,0.1); border-color: rgba(68,221,255,0.2); }
+  .feat-icon.blue  { background: rgba(0,153,255,0.1); color: var(--blue); }
+  .feat-icon.red   { background: rgba(255,68,68,0.1); border-color: rgba(255,68,68,0.2); color: var(--red); }
+  .feat-icon.purple{ background: rgba(204,68,255,0.1); border-color: rgba(204,68,255,0.2); color: var(--purple); }
+  .feat-icon.cyan  { background: rgba(68,221,255,0.1); border-color: rgba(68,221,255,0.2); color: var(--cyan); }
 
   .feat-title {
     font-family: 'Space Mono', monospace;
@@ -444,7 +448,7 @@
     font-family: 'Bebas Neue', sans-serif; font-size: 1.4rem;
     color: var(--blue); letter-spacing: 0.06em; text-decoration: none;
   }
-  .footer-logo span { color: var(--muted); }
+  .footer-logo span:not(.accent) { color: var(--text); }
   .footer-copy { font-size: 0.78rem; color: var(--muted); }
   .footer-links { display: flex; gap: 1.5rem; }
   .footer-links a { font-size: 0.78rem; color: var(--muted); text-decoration: none; transition: color 0.2s; }
@@ -470,7 +474,7 @@
 
 <!-- ── NAV ── -->
 <nav>
-  <a class="nav-logo" href="#"><img src="ios-icon-1024x1024_v2.png" alt="BlueLooper icon"> <span class="accent">Blue</span>Looper</a>
+  <a class="nav-logo" href="#"><img src="ios-icon-1024x1024_v2.png" alt="BlueLooper icon"> <span class="accent">Blue</span><span>Looper</span></a>
   <ul class="nav-links">
     <li><a href="#features">Features</a></li>
     <li><a href="#screenshots">Screenshots</a></li>
@@ -493,7 +497,7 @@
   </h1>
 
   <p class="hero-sub">
-    毎日のギター練習にルーパーを取り込んでみませんか。<br>エフェクトも込みでアプリで完結するシンプルな環境を iPhone/iPad で実現。
+    毎日のギター練習にLooper/Freezeを取り込んでみませんか。<br>エフェクトも含めアプリで完結するシンプルなプレイ環境を iPhone/iPad で実現。
   </p>
 
   <div class="hero-actions">
@@ -505,6 +509,9 @@
   </div>
 
   <div class="hero-device reveal">
+    <div class="device-frame">
+      <img src="capture_1.png" alt="Effects – Clean Ambient">
+    </div>
     <div class="device-frame">
       <img src="capture_3.png" alt="BlueLooper Multi-Track Looper screen">
     </div>
@@ -555,32 +562,32 @@
 
   <div class="features-grid reveal">
     <div class="feat-card">
-      <div class="feat-icon blue">🎵</div>
+      <div class="feat-icon blue"><i class="fa-solid fa-infinity"></i></div>
       <div class="feat-title">Multi-Track Looper</div>
       <p class="feat-desc">4トラックの独立ループ。重ね録り・即興演奏・楽曲制作まで自在にこなせる構成。</p>
     </div>
     <div class="feat-card">
-      <div class="feat-icon cyan">🌊</div>
+      <div class="feat-icon blue"><i class="fa-regular fa-snowflake"></i></div>
       <div class="feat-title">Sustain / Freeze</div>
       <p class="feat-desc">音を持続させるサスティーンペダル機能。コード上でのスケール／フレーズ練習などに最適。</p>
     </div>
     <div class="feat-card">
-      <div class="feat-icon red">🎸</div>
+      <div class="feat-icon blue"><i class="fa-solid fa-sliders"></i></div>
       <div class="feat-title">豊富なエフェクト</div>
       <p class="feat-desc">Comp、Booster、Overdrive、Distortion、Chorus、Delay、Reverb、Amp Simを自由に組み合わせ。</p>
     </div>
     <div class="feat-card">
-      <div class="feat-icon purple">⚡</div>
+      <div class="feat-icon blue"><i class="fa-solid fa-exclamation"></i></div>
       <div class="feat-title">直感的な操作</div>
       <p class="feat-desc">直感的なUIで、初心者から上級者まで快適に操作できます。プリセット切り替えもワンタップ。</p>
     </div>
     <div class="feat-card">
-      <div class="feat-icon blue">📱</div>
+      <div class="feat-icon blue"><i class="fa-brands fa-usb"></i></div>
       <div class="feat-title">iPhone & iPad最適化</div>
       <p class="feat-desc">iRig HD Xをはじめ各種オーディオインターフェースに対応。プラグインしてすぐ使える。</p>
     </div>
     <div class="feat-card">
-      <div class="feat-icon cyan">🎛️</div>
+      <div class="feat-icon blue"><i class="fa-solid fa-layer-group"></i></div>
       <div class="feat-title">カスタムプリセット</div>
       <p class="feat-desc">Clean Ambient、Crunch Drive、Lo-Fi Tape、Heavy Leadなど、シーンごとに音色をワンタップで呼び出し。</p>
     </div>
@@ -742,7 +749,7 @@
 
 <!-- ── FOOTER ── -->
 <footer>
-  <a class="footer-logo" href="#"><span class="accent">Blue</span>Looper</a>
+  <a class="footer-logo" href="#"><span class="accent">Blue</span><span>Looper</span></a>
   <span class="footer-copy">© 2026 Osamu Sambuichi. All rights reserved.</span>
   <div class="footer-links">
     <a href="https://github.com/sambuichi/bluelooper-support/blob/main/PRIVACY.md" target="_blank">Privacy Policy</a>
