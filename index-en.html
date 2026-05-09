@@ -629,16 +629,10 @@
   <div class="video-inner reveal">
     <div class="section-label">Preview</div>
     <h2 class="section-title">Watch in Action</h2>
-    <p>Check out real performance scenes. Available in Japanese and English versions.</p>
-
-    <div class="video-tabs">
-      <button class="vtab active" onclick="switchVideo('ja', this)">Japanese</button>
-      <button class="vtab" onclick="switchVideo('en', this)">English</button>
-    </div>
+    <p>Check out real performance scenes.</p>
 
     <div class="video-wrap">
-      <iframe id="vid-ja" width="100%" height="500" src="https://www.youtube.com/embed/eLY5LnuPer4?rel=0" title="BlueLooper - Japanese" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen sandbox="allow-same-origin allow-scripts allow-popups allow-presentation"></iframe>
-      <iframe id="vid-en" width="100%" height="500" src="https://www.youtube.com/embed/P7fJxgQOdRQ?rel=0" title="BlueLooper - English" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen sandbox="allow-same-origin allow-scripts allow-popups allow-presentation" style="display:none"></iframe>
+      <iframe width="100%" height="500" src="https://www.youtube.com/embed/P7fJxgQOdRQ?rel=0" title="BlueLooper - English" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen sandbox="allow-same-origin allow-scripts allow-popups allow-presentation"></iframe>
     </div>
   </div>
 </section>
@@ -758,21 +752,6 @@
 </footer>
 
 <script>
-  // Video switcher
-  function switchVideo(lang, btn) {
-    document.querySelectorAll('.vtab').forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    const jaVid = document.getElementById('vid-ja');
-    const enVid = document.getElementById('vid-en');
-    if (lang === 'ja') {
-      jaVid.style.display = 'block';
-      enVid.style.display = 'none';
-    } else {
-      enVid.style.display = 'block';
-      jaVid.style.display = 'none';
-    }
-  }
-
   // Scroll reveal
   const revealEls = document.querySelectorAll('.reveal');
   const observer = new IntersectionObserver((entries) => {
